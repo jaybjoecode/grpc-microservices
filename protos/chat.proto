@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service ChatService {
+    rpc GetCheckServer (EmptyRequest) returns (ServerReply) {}
+}
+
+message EmptyRequest {}
+  
+message ServerReply {
+    optional int32 status = 1;
+    optional string message = 2;
+}
+
+
